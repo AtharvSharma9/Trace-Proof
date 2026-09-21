@@ -1,4 +1,4 @@
-# Trace-Proof — PRAMAAN
+# Trace-Proof
 
 > **PRAMAAN** — *Provenance-anchored Risk Analysis of Mule Account Networks*
 
