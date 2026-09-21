@@ -1,0 +1,24 @@
+canonical_schema:
+  # CDR
+  caller: "A-Party / Calling number"
+  callee: "B-Party / Called number"
+  start_time: "Call start time"
+  duration_s: "Call duration in seconds"
+  imei: "IMEI of the handset"
+  imsi: "IMSI of the SIM"
+  cell_id: "Cell tower ID"
+  call_type: "Type of call (IN/OUT)"
+  
+  # Bank/UPI
+  debit_account: "Account debited"
+  credit_account: "Account credited"
+  amount: "Transaction amount"
+  txn_time: "Transaction time"
+  reference_no: "UTR/RRN"
+  balance_after: "Account balance after transaction"
+  
+  # Other implied
+  sender_email: "Email sender"
+  receiver_email: "Email receiver"
+  ip_address: "IP address"
+  mac_address: "MAC address"

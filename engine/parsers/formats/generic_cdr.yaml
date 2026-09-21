@@ -1,0 +1,28 @@
+name: generic_cdr
+kind: CDR
+detect:
+  any_header_matches:
+    - msisdn
+    - a-party
+    - a party
+    - calling
+    - imei
+    - cell id
+    - cell_id
+  min_matches: 2
+columns:
+  caller:     ["calling no", "calling number", "a-party", "a party", "a party no", "msisdn", "caller", "from number", "a_party", "ani"]
+  callee:     ["called no", "dialed number", "b-party", "b party", "b party no", "callee", "to number", "b_party", "dnis", "dialed"]
+  start_time: ["call date", "date time", "start time", "call_start", "datetime", "date_time", "time", "start_date"]
+  duration_s: ["duration", "dur(s)", "call duration", "duration_sec", "dur_s", "seconds"]
+  imei:       ["imei", "equipment id", "imei_no", "equipment_id"]
+  imsi:       ["imsi", "sim id", "imsi_no", "sim_id"]
+  cell_id:    ["cell id", "first cgi", "lac-ci", "cell_id", "cgi", "tower_id", "site_id"]
+  call_type:  ["type", "call type", "in/out", "call_type", "direction"]
+datetime_formats:
+  - "%d/%m/%Y %H:%M:%S"
+  - "%Y-%m-%d %H:%M:%S"
+  - "%d-%b-%y %I:%M %p"
+  - "%d-%m-%Y %H:%M:%S"
+  - "%Y/%m/%d %H:%M:%S"
+  - "%d/%m/%Y %H:%M"

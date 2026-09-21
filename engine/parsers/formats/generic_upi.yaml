@@ -1,0 +1,22 @@
+name: generic_upi
+kind: UPI
+detect:
+  any_header_matches:
+    - upi
+    - vpa
+    - "@"
+    - payer vpa
+    - payee vpa
+    - utr
+  min_matches: 2
+columns:
+  txn_time:       ["date", "txn date", "transaction date", "settlement date"]
+  debit_account:  ["payer vpa", "payer upi", "sender vpa", "from vpa"]
+  credit_account: ["payee vpa", "payee upi", "receiver vpa", "to vpa", "beneficiary vpa"]
+  amount:         ["amount", "txn amount"]
+  reference_no:   ["utr", "ref no", "transaction id", "txn ref id", "rrn"]
+  channel:        ["channel", "payment channel"]
+datetime_formats:
+  - "%d/%m/%Y %H:%M:%S"
+  - "%Y-%m-%d %H:%M:%S"
+  - "%d-%m-%Y %H:%M:%S"
