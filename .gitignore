@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Local tooling cache
+.cache/
+
+# Nested checkout
+Trace-Proof/
+
+# Project specific
+case/exports/
+*.sqlite3
+*.db
