@@ -1,9 +1,9 @@
 # Trace-Proof
 
-> **PRAMAAN** — *Provenance-anchored Risk Analysis of Mule Account Networks*
+
 
 **Submission for:** AI-Powered Unified Cyber Fraud Analysis & Digital Artifact Correlator  
-**Team size:** 4 · **Round:** Screening  
+
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
 [![Offline](https://img.shields.io/badge/Runs-Fully%20Offline-green)](#non-functional-requirements)
