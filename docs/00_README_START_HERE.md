@@ -1,9 +1,9 @@
-# Trace-Proof — Project Documentation Set
+﻿# Trace-Proof ΓÇö Project Documentation Set
 
-**PRAMAAN** — *Provenance-anchored Risk Analysis of Mule Account Networks*
+**PRAMAAN** ΓÇö *Provenance-anchored Risk Analysis of Mule Account Networks*
 
 Submission for: **AI-Powered Unified Cyber Fraud Analysis \& Digital Artifact Correlator**
-Team size: 4 · Round: Screening
+Team size: 4 ┬╖ Round: Screening
 
 \---
 
@@ -65,8 +65,8 @@ shot.
 
 |Required deliverable|Source|
 |-|-|
-|Technical Proposal (2–3 pages)|`02\_TRD.md` §2, §3, §7 + `05\_Backend\_Schema.md` §1|
-|PoC / code prototype|Phases 0–4 of `06\_Implementation\_Plan.md`|
+|Technical Proposal (2ΓÇô3 pages)|`02\_TRD.md` ┬º2, ┬º3, ┬º7 + `05\_Backend\_Schema.md` ┬º1|
+|PoC / code prototype|Phases 0ΓÇô4 of `06\_Implementation\_Plan.md`|
 |Demo video (max 3 min)|Phase 9 storyboard in `06\_Implementation\_Plan.md`|
 
 
