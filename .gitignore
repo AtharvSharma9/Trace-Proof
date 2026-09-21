@@ -25,3 +25,5 @@ Trace-Proof/
 case/exports/
 *.sqlite3
 *.db
+
+solution.md
