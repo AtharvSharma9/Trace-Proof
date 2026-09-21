@@ -1,0 +1,27 @@
+name: generic_bank
+kind: BANK
+detect:
+  any_header_matches:
+    - debit
+    - credit
+    - balance
+    - narration
+    - account no
+    - txn date
+    - transaction date
+  min_matches: 2
+columns:
+  txn_time:       ["date", "txn date", "transaction date", "value date", "posting date"]
+  debit_account:  ["account no", "account number", "debit account", "dr account", "sender account"]
+  credit_account:  ["beneficiary account", "credit account", "cr account", "receiver account"]
+  amount:         ["amount", "txn amount", "debit amount", "credit amount", "dr", "cr"]
+  direction:      ["dr/cr", "type", "transaction type", "dr cr"]
+  reference_no:   ["reference no", "ref no", "utr", "rrn", "transaction id", "txn id"]
+  balance_after:  ["balance", "closing balance", "available balance", "balance after txn"]
+  channel:        ["channel", "mode", "payment mode"]
+datetime_formats:
+  - "%d/%m/%Y"
+  - "%d-%b-%Y"
+  - "%Y-%m-%d"
+  - "%d/%m/%Y %H:%M:%S"
+  - "%d-%m-%Y"
