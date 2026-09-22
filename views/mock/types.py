@@ -1,5 +1,5 @@
 """
-Type definitions for Trace-Proof mock data layer.
+Type definitions for Pramaan mock data layer.
 Named as specified in docs/05_Backend_Schema.md.
 """
 

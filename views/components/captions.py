@@ -1,5 +1,5 @@
 """
-Trace-Proof Provenance & Table Captions (views/components/captions.py)
+Pramaan Provenance & Table Captions (views/components/captions.py)
 """
 
 def render_provenance_caption(filename: str, row_number: int, sha256: str) -> str:

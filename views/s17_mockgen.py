@@ -1,5 +1,5 @@
 """
-Trace-Proof Screen S17: Synthetic Data Generator & Tamper Simulator (views/s17_mockgen.py)
+Pramaan Screen S17: Synthetic Data Generator & Tamper Simulator (views/s17_mockgen.py)
 Rehearsal fixture generator and demo-only tampering simulator.
 """
 

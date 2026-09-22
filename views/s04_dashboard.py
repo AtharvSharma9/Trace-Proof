@@ -1,5 +1,5 @@
 """
-Trace-Proof S04 — Case Dashboard (views/s04_dashboard.py)
+Pramaan S04 — Case Dashboard (views/s04_dashboard.py)
 Section 7 of the brief order:
 1. Case header
 2. Integrity banner

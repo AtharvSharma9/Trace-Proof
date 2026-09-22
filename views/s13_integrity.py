@@ -1,5 +1,5 @@
 """
-Trace-Proof S13 — Integrity Verify (views/s13_integrity.py)
+Pramaan S13 — Integrity Verify (views/s13_integrity.py)
 The 20-second demo centerpiece for 25% integrity criterion.
 Features single "Verify Now" button, evidence hash verification table,
 audit chain panel, full-width green success panel, and full-width red TAMPER DETECTED panel

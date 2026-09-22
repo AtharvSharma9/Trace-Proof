@@ -1,5 +1,5 @@
 """
-Trace-Proof S09 — Network Graph (views/s09_graph.py)
+Pramaan S09 — Network Graph (views/s09_graph.py)
 Interactive PyVis canvas with 100% offline vendored assets, risk matrix colors,
 victim ring & cash-out double ring, highlighted path, legend, controls panel,
 right-side node/edge drawers, 2-hop neighbourhood isolation, large graph banner,

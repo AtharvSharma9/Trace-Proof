@@ -1,5 +1,5 @@
 """
-Trace-Proof S15 — Brief Builder & Export (views/s15_brief.py)
+Pramaan S15 — Brief Builder & Export (views/s15_brief.py)
 Generates defensible 1-page court brief.
 Includes 3 blocking pre-checks, officer password re-authentication gate,
 live preview with section toggles (hash appendix locked on), remarks box,
@@ -166,7 +166,7 @@ def render_s15_brief():
                 <!-- Document Header -->
                 <div style='border-bottom: 2px solid #1B3A5C; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-start;'>
                     <div>
-                        <div style='font-size: 20px; font-weight: 700; color: #1B3A5C; letter-spacing: -0.02em;'>Trace-Proof — Cyber Fraud Triage Brief</div>
+                        <div style='font-size: 20px; font-weight: 700; color: #1B3A5C; letter-spacing: -0.02em;'>PRAMAAN — Cyber Fraud Triage Brief</div>
                         <div style='font-size: 11px; color: #475569; font-weight: 600; text-transform: uppercase;'>Workstation Evidentiary Summary Report</div>
                     </div>
                     <div style='text-align: right; font-size: 11px; color: #475569;'>
@@ -211,7 +211,7 @@ def render_s15_brief():
 
                 <!-- Footer Certificate -->
                 <div style='border-top: 2px solid #1B3A5C; padding-top: 8px; margin-top: 16px; display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: #94A3B8;'>
-                    <div>Trace-Proof Workstation Head Hash: <code style='font-family: "JetBrains Mono", monospace;'>a1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6…</code></div>
+                    <div>Pramaan Workstation Head Hash: <code style='font-family: "JetBrains Mono", monospace;'>a1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6…</code></div>
                     <div>Page 1 of 1 · Verified Offline Output</div>
                 </div>
 

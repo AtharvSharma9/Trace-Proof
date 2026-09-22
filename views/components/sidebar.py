@@ -1,5 +1,5 @@
 """
-Trace-Proof Persistent Left Sidebar Shell (views/components/sidebar.py)
+Pramaan Persistent Left Sidebar Shell (views/components/sidebar.py)
 Implements fixed 240px shell, pipeline-ordered navigation, disabled state tooltips,
 officer info, active case indicator, integrity pill, and offline status footer.
 """
@@ -46,7 +46,7 @@ def render_sidebar(current_view: str, case_id: str) -> str:
             """
             <div style='padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 12px;'>
                 <div style='font-size: 18px; font-weight: 700; color: #1B3A5C; letter-spacing: -0.02em;'>
-                    Trace-Proof
+                    Pramaan
                 </div>
                 <div style='font-size: 11px; color: #475569; margin-top: 2px;'>
                     Offline Forensic Triage Instrument
@@ -122,7 +122,7 @@ def render_sidebar(current_view: str, case_id: str) -> str:
             """
             <div style='padding-top: 12px; border-top: 1px solid #E2E8F0;'>
                 <span class='tp-offline-pill'>Offline · 0 network calls</span>
-                <div style='font-size: 10px; color: #94A3B8; margin-top: 6px;'>Trace-Proof v1.0.0-offline</div>
+                <div style='font-size: 10px; color: #94A3B8; margin-top: 6px;'>Pramaan v1.0.0-offline</div>
             </div>
             """,
             unsafe_allow_html=True

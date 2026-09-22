@@ -1,5 +1,5 @@
 """
-Trace-Proof Screen S12: Chronological Timeline (views/s12_timeline.py)
+Pramaan Screen S12: Chronological Timeline (views/s12_timeline.py)
 Unified timeline of transactions, call logs, IP sessions, and SIM events.
 """
 

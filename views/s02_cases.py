@@ -1,5 +1,5 @@
 """
-Trace-Proof S02 — Case List Screen (views/s02_cases.py)
+Pramaan S02 — Case List Screen (views/s02_cases.py)
 Renders case registry table with search, status filters, integrity badges,
 corrupt case handling, and empty state with sample generator rehearsal shortcut.
 """

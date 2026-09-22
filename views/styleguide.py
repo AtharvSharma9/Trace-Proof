@@ -1,5 +1,5 @@
 """
-Trace-Proof Design System Style Guide View (views/styleguide.py)
+Pramaan Design System Style Guide View (views/styleguide.py)
 Hidden route: ?view=styleguide
 Renders every shared component in every state using seed 42 fixtures.
 """
@@ -20,7 +20,7 @@ def render_styleguide():
     
     # 1. Screen Title Block
     title_clicked = render_screen_title(
-        title="Trace-Proof Design System & Style Guide",
+        title="Pramaan Design System & Style Guide",
         subtitle="Forensic instrument components, typography scale, risk chips, and layout tokens.",
         breadcrumbs="System › Components",
         primary_action_label="+ New Case",

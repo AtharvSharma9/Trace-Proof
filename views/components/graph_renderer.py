@@ -1,5 +1,5 @@
 """
-Trace-Proof Offline PyVis & Matplotlib Fallback Graph Renderer (views/components/graph_renderer.py)
+Pramaan Offline PyVis & Matplotlib Fallback Graph Renderer (views/components/graph_renderer.py)
 Vendors vis-network assets inline/locally and generates static Matplotlib fallback image.
 """
 
@@ -221,7 +221,7 @@ def generate_matplotlib_fallback_png(case_id: str) -> str:
     labels = {n: G.nodes[n]['label'][:12] for n in G.nodes()}
     nx.draw_networkx_labels(G, pos, labels=labels, font_size=8, font_family='sans-serif', ax=ax)
 
-    ax.set_title("Trace-Proof Forensic Network Graph (Static Fallback View)", fontsize=12, fontweight='bold', color='#1B3A5C', pad=12)
+    ax.set_title("Pramaan Forensic Network Graph (Static Fallback View)", fontsize=12, fontweight='bold', color='#1B3A5C', pad=12)
     ax.axis('off')
     plt.tight_layout()
 

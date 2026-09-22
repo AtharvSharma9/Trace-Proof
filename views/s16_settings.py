@@ -1,5 +1,5 @@
 """
-Trace-Proof Screen S16: Settings & Risk Thresholds (views/s16_settings.py)
+Pramaan Screen S16: Settings & Risk Thresholds (views/s16_settings.py)
 System settings, customizable rule weights, correlation parameters, and offline status probe.
 """
 
@@ -78,7 +78,7 @@ def render_s16_settings():
         
         w1, w2 = st.columns(2)
         with w1:
-            st.text_input("Default Case Storage Directory", value="C:\\TraceProof\\cases\\", key="cfg_case_dir")
+            st.text_input("Default Case Storage Directory", value="C:\\Pramaan\\cases\\", key="cfg_case_dir")
             st.selectbox("Processing Engine Mode", ["Streaming (Low RAM / Large Cases)", "In-Memory (Fastest)"], index=0, key="cfg_proc_mode")
             
         with w2:

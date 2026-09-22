@@ -1,5 +1,5 @@
 """
-Trace-Proof S10 — Risk Board (views/s10_risk.py)
+Pramaan S10 — Risk Board (views/s10_risk.py)
 Ranked suspect cards, full sentence reason codes, anomaly model toggle,
 band and entity filters, seizure recommendations panel with copy button,
 and rules-only degraded banner.

@@ -1,4 +1,4 @@
-# Trace-Proof — Project Documentation Set
+# Pramaan — Project Documentation Set
 
 **PRAMAAN** — *Provenance-anchored Risk Analysis of Mule Account Networks*
 

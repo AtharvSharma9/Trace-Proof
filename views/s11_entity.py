@@ -1,5 +1,5 @@
 """
-Trace-Proof S11 — Entity Detail (views/s11_entity.py)
+Pramaan S11 — Entity Detail (views/s11_entity.py)
 The product's core proof. Every derived fact opens into the exact raw row.
 Includes "Why this score" with rule code, points, plain sentence, and evidence expander,
 linked entities, timeline, appearances, officer notes, and red "Provenance missing" error badge.

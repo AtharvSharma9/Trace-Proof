@@ -1,5 +1,5 @@
 """
-Trace-Proof S07 — Evidence Register (views/s07_evidence.py)
+Pramaan S07 — Evidence Register (views/s07_evidence.py)
 Printable, read-only evidence file register with full 64-character SHA-256 hashes.
 """
 

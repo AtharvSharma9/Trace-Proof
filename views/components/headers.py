@@ -1,5 +1,5 @@
 """
-Trace-Proof Screen Title Block Component (views/components/headers.py)
+Pramaan Screen Title Block Component (views/components/headers.py)
 """
 
 import streamlit as st

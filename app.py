@@ -1,5 +1,5 @@
 """
-Trace-Proof — Offline Forensic Triage Tool
+Pramaan — Offline Forensic Triage Tool
 Main Application Router & Session State Manager (app.py)
 """
 
@@ -29,7 +29,7 @@ from views.s17_mockgen import render_s17_mockgen
 
 # ── 1. PAGE CONFIGURATION ───────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Trace-Proof — Offline Forensic Triage",
+    page_title="Pramaan — Offline Forensic Triage",
     page_icon="🔍",
     layout="wide",
     initial_sidebar_state="expanded"

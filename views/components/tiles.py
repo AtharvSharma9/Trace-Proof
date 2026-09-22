@@ -1,5 +1,5 @@
 """
-Trace-Proof Dashboard Metric Tile Component (views/components/tiles.py)
+Pramaan Dashboard Metric Tile Component (views/components/tiles.py)
 """
 
 def render_metric_tile(label: str, value: str, subtext: str = "", risk_band: str = None) -> str:

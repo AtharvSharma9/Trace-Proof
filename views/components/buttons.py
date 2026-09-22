@@ -1,5 +1,5 @@
 """
-Trace-Proof Button Components (views/components/buttons.py)
+Pramaan Button Components (views/components/buttons.py)
 Supports Primary, Secondary, Ghost, Danger and Disabled buttons.
 """
 

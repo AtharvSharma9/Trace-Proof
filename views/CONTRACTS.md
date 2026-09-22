@@ -1,8 +1,8 @@
-# Trace-Proof Front-End Data Contracts (`views/CONTRACTS.md`)
+# Pramaan Front-End Data Contracts (`views/CONTRACTS.md`)
 
 This document records the exact interface signatures between the Streamlit front-end views and the data layer (`views/api.py`).
 
-Functions tagged **`CONTRACT-NEEDED`** represent front-end features that require backend service implementation when `TRACEPROOF_USE_REAL=1`.
+Functions tagged **`CONTRACT-NEEDED`** represent front-end features that require backend service implementation when `PRAMAAN_USE_REAL=1`.
 
 ---
 

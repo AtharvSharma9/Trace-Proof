@@ -1,5 +1,5 @@
 """
-Trace-Proof Screen S08: Entities & Links (views/s08_entities.py)
+Pramaan Screen S08: Entities & Links (views/s08_entities.py)
 Entity register and correlated relationship links view.
 """
 

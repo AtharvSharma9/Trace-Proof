@@ -1,5 +1,5 @@
 """
-Trace-Proof Chips & Status Pills (views/components/chips.py)
+Pramaan Chips & Status Pills (views/components/chips.py)
 Includes Risk Chips (score + word), Hash Chips (12-char + copy), and Status Pills.
 """
 

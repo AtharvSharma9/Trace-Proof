@@ -1,5 +1,5 @@
 """
-Trace-Proof S00 — First-Run Setup Screen (views/s00_setup.py)
+Pramaan S00 — First-Run Setup Screen (views/s00_setup.py)
 Full-screen layout (no sidebar).
 Shown when zero officers exist in credential store.
 """
@@ -24,7 +24,7 @@ def render_s00_setup():
         render_banner(
             kind="error",
             title="Database Not Writable",
-            body="Cannot write to the data folder. Run Trace-Proof from a location you have write access to."
+            body="Cannot write to the data folder. Run Pramaan from a location you have write access to."
         )
         if st.button("Retry Write Access Check"):
             st.session_state["simulate_write_block"] = False
@@ -35,7 +35,7 @@ def render_s00_setup():
     st.markdown(
         """
         <div style='max-width: 600px; margin: 40px auto 20px auto; text-align: center;'>
-            <div style='font-size: 28px; font-weight: 700; color: #1B3A5C;'>Trace-Proof</div>
+            <div style='font-size: 28px; font-weight: 700; color: #1B3A5C;'>Pramaan</div>
             <div style='font-size: 14px; color: #475569; margin-top: 4px;'>First-Run Setup — Initial Officer Workstation Account</div>
         </div>
         """,

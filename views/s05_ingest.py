@@ -1,5 +1,5 @@
 """
-Trace-Proof S05 — Ingest: Drop & Detect (views/s05_ingest.py)
+Pramaan S05 — Ingest: Drop & Detect (views/s05_ingest.py)
 Includes drop zone, detection table with confidence bands, per-row actions,
 "Confirm all high-confidence", live rows/sec benchmark summary bar,
 and all error states (unknown type, parse failure, duplicate, password-protected, zero-byte, >2GB limit).

@@ -1,5 +1,5 @@
 """
-Trace-Proof Empty State Component (views/components/empty_state.py)
+Pramaan Empty State Component (views/components/empty_state.py)
 """
 
 import streamlit as st

@@ -1,5 +1,5 @@
 """
-Self-check script for Trace-Proof fixtures verification.
+Self-check script for Pramaan fixtures verification.
 Validates that every risk reason and derived fact has an evidence reference (file, row, sha256).
 Run directly: python views/_check_fixtures.py
 """
@@ -15,7 +15,7 @@ from views.mock.fixtures import (
 )
 
 def run_checks():
-    print("Running Trace-Proof Fixtures Verification...")
+    print("Running Pramaan Fixtures Verification...")
     errors = []
 
     # 1. Check Evidence Files

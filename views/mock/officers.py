@@ -1,5 +1,5 @@
 """
-Mock Local Officer Store for Trace-Proof.
+Mock Local Officer Store for Pramaan.
 Used by S00 (Setup) and S01 (Login).
 """
 
@@ -16,7 +16,7 @@ _MOCK_OFFICERS: List[Officer] = [
         rank="Inspector of Police",
         unit="Cyber Crime Cell, Zone 4",
         role="SUPERVISOR",
-        password_hash=hashlib.sha256(b"TraceProof2026!").hexdigest(),
+        password_hash=hashlib.sha256(b"Pramaan2026!").hexdigest(),
         is_active=True,
         failed_attempts=0,
         created_at="2026-09-01 10:00:00 IST",

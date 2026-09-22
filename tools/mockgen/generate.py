@@ -1,1 +1,1 @@
-Synthetic data generator 
+# Synthetic data generator

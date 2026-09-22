@@ -1,8 +1,8 @@
 """
-Trace-Proof Data API Layer.
+Pramaan Data API Layer.
 Sole data module imported by all screens (S00 - S17).
 
-Controlled by environment variable TRACEPROOF_USE_REAL:
+Controlled by environment variable PRAMAAN_USE_REAL:
 - Default (0): returns mock data from views/mock/
 - Real (1): routes to services/ module functions if implemented
 """
@@ -17,14 +17,14 @@ from views.mock import officers as mock_officers
 from views.mock import fixtures as mock_fixtures
 
 # Check execution mode
-USE_REAL_SERVICES = os.environ.get("TRACEPROOF_USE_REAL", "0") == "1"
+USE_REAL_SERVICES = os.environ.get("PRAMAAN_USE_REAL", "0") == "1"
 
 
 def _check_real_mode(function_name: str):
     """If REAL mode is enabled but no service exists, raise an error card error."""
     if USE_REAL_SERVICES:
         raise NotImplementedError(
-            f"[TRACEPROOF_USE_REAL=1] Real service backend for '{function_name}' is not yet connected."
+            f"[PRAMAAN_USE_REAL=1] Real service backend for '{function_name}' is not yet connected."
         )
 
 
@@ -377,7 +377,7 @@ def generate_brief(case_id: str, officer_badge: str, password: str, sections: Di
         cv.rect(40, height - 60, width - 80, 40, fill=True, stroke=False)
         cv.setFillColorRGB(1, 1, 1)
         cv.setFont("Helvetica-Bold", 14)
-        cv.drawString(50, height - 42, "TRACE-PROOF — CYBER FRAUD TRIAGE BRIEF")
+        cv.drawString(50, height - 42, "PRAMAAN — CYBER FRAUD TRIAGE BRIEF")
         cv.setFont("Helvetica", 9)
         cv.drawString(50, height - 54, "OFFLINE FORENSIC EVIDENTIARY SUMMARY REPORT")
         
@@ -508,9 +508,9 @@ def get_workstation_info() -> Dict[str, Any]:
     if USE_REAL_SERVICES:
         _check_real_mode("get_workstation_info")
     return {
-        "app_name": "Trace-Proof",
+        "app_name": "Pramaan",
         "version": "1.0.0-offline",
         "offline_status": "Strictly Offline · 0 network calls",
         "workstation_id": "WS-CYBER-DELHI-04",
-        "db_location": "C:\\TraceProof\\data\\pramaan_app.db"
+        "db_location": "C:\\Pramaan\\data\\pramaan_app.db"
     }

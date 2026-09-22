@@ -1,5 +1,5 @@
 """
-Coherent Mock Case Fixtures (Seed 42) for Trace-Proof.
+Coherent Mock Case Fixtures (Seed 42) for Pramaan.
 Contains 1 victim, 1 fraudster, 3 layer-1 mules, 2 layer-2 mules, 1 ATM cash-out.
 ₹4,80,000 moves in 11 minutes across 3 hops (96% pass-through).
 Includes all forensic hooks (shared IMEI, multi-IMSI, recurring UPI, SPF mismatch, spoofed call)

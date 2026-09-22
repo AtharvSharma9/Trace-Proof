@@ -1,5 +1,5 @@
 """
-Vendored SVG Lucide Icons Helper for Trace-Proof.
+Vendored SVG Lucide Icons Helper for Pramaan.
 No external network calls, pure inline SVG string generators.
 """
 

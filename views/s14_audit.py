@@ -1,5 +1,5 @@
 """
-Trace-Proof S14 — Audit Log (views/s14_audit.py)
+Pramaan S14 — Audit Log (views/s14_audit.py)
 Chronological, filterable, read-only audit log table.
 Strictly NO edit or delete controls anywhere on this screen by design.
 """

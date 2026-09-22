@@ -1,5 +1,5 @@
 """
-Trace-Proof S06 — Ingest: Confirm Mapping (views/s06_mapping.py)
+Pramaan S06 — Ingest: Confirm Mapping (views/s06_mapping.py)
 Human checkpoint for schema-agnostic header resolution.
 Includes confidence bars, match reasons, unmapped columns expander, datetime format check,
 10-row preview, disabled Confirm rule with missing fields list, and "Save as reusable format".

@@ -1,5 +1,5 @@
 """
-Trace-Proof Status Banner Component (views/components/banners.py)
+Pramaan Status Banner Component (views/components/banners.py)
 Renders full-width status banners: Success, Warning, Error, Info.
 """
 

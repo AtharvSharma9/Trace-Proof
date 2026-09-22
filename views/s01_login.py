@@ -1,5 +1,5 @@
 """
-Trace-Proof S01 — Login Screen (views/s01_login.py)
+Pramaan S01 — Login Screen (views/s01_login.py)
 Full-screen layout (no sidebar).
 Includes lockout mechanism with countdown, security rule (never reveal which field failed),
 and session-expired banner.
@@ -20,7 +20,7 @@ def render_s01_login():
     st.markdown(
         """
         <div style='max-width: 480px; margin: 40px auto 16px auto; text-align: center;'>
-            <div style='font-size: 32px; font-weight: 700; color: #1B3A5C; letter-spacing: -0.02em;'>Trace-Proof</div>
+            <div style='font-size: 32px; font-weight: 700; color: #1B3A5C; letter-spacing: -0.02em;'>Pramaan</div>
             <div style='font-size: 14px; color: #475569; margin-top: 4px;'>Offline Forensic Triage Instrument</div>
         </div>
         """,
@@ -91,7 +91,7 @@ def render_s01_login():
             """
             <div style='margin-top: 24px; padding-top: 12px; border-top: 1px solid #E2E8F0; text-align: center; font-size: 11px; color: #94A3B8;'>
                 <span class='tp-offline-pill'>Offline · No data leaves this workstation</span>
-                <div style='margin-top: 4px;'>Trace-Proof v1.0.0-offline</div>
+                <div style='margin-top: 4px;'>Pramaan v1.0.0-offline</div>
             </div>
             </div>
             """,
