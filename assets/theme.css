@@ -1,0 +1,436 @@
+/* ==========================================================================
+   Trace-Proof Forensic Instrument Design System (04_UI_UX_Brief.md)
+   ========================================================================== */
+
+/* ── 0. BUNDLED LOCAL FONTS ────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Inter-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Inter-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Inter-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2');
+}
+
+
+/* ── 1. CORE TOKENS & VARIABLES ────────────────────────────────────────── */
+:root {
+  /* Ink & Surface */
+  --ink: #0F172A;
+  --ink-muted: #475569;
+  --ink-faint: #94A3B8;
+  --surface: #FFFFFF;
+  --surface-alt: #F8FAFC;
+  --surface-sunken: #F1F5F9;
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+
+  /* Brand & Action */
+  --primary: #1B3A5C;
+  --primary-hover: #16304C;
+  --primary-soft: #E8EEF4;
+  --accent-verified: #0E7C86;
+  --accent-verified-soft: #E0F2F3;
+
+  /* Risk & Semantic Scale */
+  --risk-low-fill: #15803D;
+  --risk-low-text: #14532D;
+  --risk-low-bg: #DCFCE7;
+
+  --risk-med-fill: #B45309;
+  --risk-med-text: #78350F;
+  --risk-med-bg: #FEF3C7;
+
+  --risk-high-fill: #C2410C;
+  --risk-high-text: #7C2D12;
+  --risk-high-bg: #FFEDD5;
+
+  --risk-crit-fill: #B91C1C;
+  --risk-crit-text: #7F1D1D;
+  --risk-crit-bg: #FEE2E2;
+
+  /* Geometry */
+  --radius-btn: 6px;
+  --radius-card: 6px;
+  --radius-chip: 4px;
+  --radius-drawer: 8px;
+}
+
+
+/* ── 2. STREAMLIT CHROME SUPPRESSION ───────────────────────────────────── */
+header[data-testid="stHeader"] { display: none !important; }
+footer { display: none !important; }
+#MainMenu { visibility: hidden !important; }
+.stDeployButton { display: none !important; }
+div[data-testid="stToolbar"] { display: none !important; }
+div[data-testid="stDecoration"] { display: none !important; }
+div[data-testid="stStatusWidget"] { display: none !important; }
+
+
+/* ── 3. BASE & TYPOGRAPHY SCALE ────────────────────────────────────────── */
+html, body, [class*="css"] {
+  font-family: Inter, "Segoe UI", system-ui, Roboto, sans-serif !important;
+  color: var(--ink);
+  background-color: var(--surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tp-display { font-size: 30px; line-height: 38px; font-weight: 600; color: var(--ink); }
+.tp-h1      { font-size: 24px; line-height: 32px; font-weight: 600; color: var(--ink); }
+.tp-h2      { font-size: 19px; line-height: 28px; font-weight: 600; color: var(--ink); }
+.tp-h3      { font-size: 16px; line-height: 24px; font-weight: 600; color: var(--ink); }
+.tp-body    { font-size: 15px; line-height: 24px; font-weight: 400; color: var(--ink); }
+.tp-body-sm { font-size: 13.5px; line-height: 20px; font-weight: 400; color: var(--ink); }
+.tp-caption { font-size: 12px; line-height: 16px; font-weight: 400; color: var(--ink-muted); }
+.tp-label   { font-size: 12px; line-height: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); }
+.tp-mono, .tabular-nums, code, pre {
+  font-family: "JetBrains Mono", "Cascadia Mono", Consolas, monospace !important;
+  font-variant-numeric: tabular-nums !important;
+}
+.tp-metric  { font-family: "JetBrains Mono", monospace; font-size: 34px; line-height: 40px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+
+/* ── 4. LAYOUT SHELL (240px SIDEBAR + CONTENT AREA) ────────────────────── */
+section[data-testid="stSidebar"] {
+  width: 240px !important;
+  min-width: 240px !important;
+  max-width: 240px !important;
+  background-color: var(--surface-alt) !important;
+  border-right: 1px solid var(--border) !important;
+}
+
+section[data-testid="stSidebar"] > div {
+  padding: 1rem 0.75rem !important;
+}
+
+.main .block-container {
+  max-width: 1360px !important;
+  padding: 1.5rem 2rem 2rem 2rem !important;
+}
+
+
+/* ── 5. BUTTON STYLES (RECTANGULAR, 6px RADIUS, NO PILLS) ─────────────── */
+.stButton > button {
+  border-radius: var(--radius-btn) !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  height: 38px !important;
+  padding: 0 16px !important;
+  border: 1px solid var(--border-strong) !important;
+  background-color: var(--surface) !important;
+  color: var(--ink) !important;
+  box-shadow: none !important;
+  transition: all 150ms ease-in-out;
+}
+
+.stButton > button:hover {
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--ink-muted) !important;
+}
+
+/* Primary Variant */
+.stButton > button[kind="primary"], .tp-btn-primary {
+  background-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  border: 1px solid var(--primary) !important;
+  font-weight: 600 !important;
+  height: 44px !important;
+}
+
+.stButton > button[kind="primary"]:hover, .tp-btn-primary:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+/* Secondary Variant */
+.tp-btn-secondary {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border-strong) !important;
+  color: var(--ink) !important;
+}
+
+/* Ghost Variant */
+.tp-btn-ghost {
+  background-color: transparent !important;
+  border: none !important;
+  color: var(--primary) !important;
+  padding: 0 8px !important;
+}
+.tp-btn-ghost:hover {
+  background-color: var(--primary-soft) !important;
+}
+
+/* Danger Variant */
+.tp-btn-danger {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--risk-crit-fill) !important;
+  color: var(--risk-crit-fill) !important;
+}
+.tp-btn-danger:hover {
+  background-color: var(--risk-crit-fill) !important;
+  color: #FFFFFF !important;
+}
+
+/* Disabled */
+.stButton > button:disabled, .tp-btn-disabled {
+  background-color: var(--surface-sunken) !important;
+  border-color: var(--border) !important;
+  color: var(--ink-faint) !important;
+  cursor: not-allowed !important;
+}
+
+
+/* ── 6. CARDS, TILES & CONTAINERS ───────────────────────────────────────── */
+.tp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.tp-metric-tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 16px 20px;
+}
+.tp-metric-tile .label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+}
+.tp-metric-tile .value {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 4px 0;
+}
+.tp-metric-tile .subtext {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+
+/* ── 7. RISK CHIPS & HASH DISPLAY ───────────────────────────────────────── */
+.tp-risk-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: var(--radius-chip);
+  font-size: 13px;
+  font-weight: 600;
+}
+.tp-risk-chip.low      { background: var(--risk-low-bg);  color: var(--risk-low-text); }
+.tp-risk-chip.medium   { background: var(--risk-med-bg);  color: var(--risk-med-text); }
+.tp-risk-chip.high     { background: var(--risk-high-bg); color: var(--risk-high-text); }
+.tp-risk-chip.critical { background: var(--risk-crit-bg); color: var(--risk-crit-text); }
+
+.tp-hash-chip {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  color: var(--ink-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tp-hash-chip.verified { color: var(--accent-verified); border-color: var(--accent-verified-soft); }
+.tp-hash-chip.mismatch { color: var(--risk-crit-fill); border-color: var(--risk-crit-bg); }
+
+
+/* ── 8. PROVENANCE CAPTION ──────────────────────────────────────────────── */
+.tp-provenance {
+  font-size: 12px;
+  color: var(--ink-muted);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.tp-provenance .file-ref {
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: var(--ink);
+}
+
+
+/* ── 9. BANNERS & ALERTS ────────────────────────────────────────────────── */
+.tp-banner {
+  padding: 14px 18px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tp-banner.success { background-color: var(--risk-low-bg); border-color: var(--risk-low-fill); color: var(--risk-low-text); }
+.tp-banner.warning { background-color: var(--risk-med-bg); border-color: var(--risk-med-fill); color: var(--risk-med-text); }
+.tp-banner.error   { background-color: var(--risk-crit-bg); border-color: var(--risk-crit-fill); color: var(--risk-crit-text); }
+.tp-banner.info    { background-color: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
+
+.tp-banner .title { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+.tp-banner .body  { font-size: 13px; opacity: 0.9; }
+
+
+/* ── 10. STATUS PILLS ───────────────────────────────────────────────────── */
+.tp-status-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.tp-status-pill.verified { background-color: var(--accent-verified-soft); color: var(--accent-verified); border: 1px solid var(--accent-verified); }
+.tp-status-pill.offline  { background-color: var(--surface-sunken); color: var(--ink-muted); border: 1px solid var(--border-strong); }
+.tp-status-pill.warning  { background-color: var(--risk-med-bg); color: var(--risk-med-text); border: 1px solid var(--risk-med-fill); }
+.tp-status-pill.error    { background-color: var(--risk-crit-bg); color: var(--risk-crit-text); border: 1px solid var(--risk-crit-fill); }
+
+
+/* ── 11. EMPTY STATE ────────────────────────────────────────────────────── */
+.tp-empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-card);
+  margin: 16px 0;
+}
+.tp-empty-state .icon { font-size: 32px; color: var(--ink-faint); margin-bottom: 12px; }
+.tp-empty-state .title { font-size: 16px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.tp-empty-state .subtext { font-size: 13.5px; color: var(--ink-muted); margin-bottom: 16px; }
+
+
+/* ── 12. TABLES ─────────────────────────────────────────────────────────── */
+.tp-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.tp-table-header .count {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+
+/* ── 13. PRINT STYLESHEET ───────────────────────────────────────────────── */
+@media print {
+  section[data-testid="stSidebar"] { display: none !important; }
+  .stButton, button, .no-print     { display: none !important; }
+  .main .block-container          { max-width: 100% !important; padding: 0 !important; }
+  body                            { background-color: #FFFFFF !important; color: #000000 !important; }
+  table, tr, td, th, .tp-card     { page-break-inside: avoid !important; }
+}
+
+
+/* ── 14. FOCUS RINGS & KEYBOARD ACCESSIBILITY ───────────────────────────── */
+:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--primary) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px var(--primary-soft) !important;
+}
+
+
+/* ── 16. NATIVE STREAMLIT WIDGET OVERRIDES ──────────────────────────────── */
+.stTextInput input, .stNumberInput input, .stSelectbox select, div[data-baseweb="select"] {
+  border-radius: var(--radius-btn) !important;
+  border-color: var(--border-strong) !important;
+  font-size: 13.5px !important;
+  color: var(--ink) !important;
+}
+
+div[data-baseweb="select"] > div {
+  background-color: var(--surface) !important;
+  border-radius: var(--radius-btn) !important;
+  border-color: var(--border-strong) !important;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+  gap: 8px !important;
+  border-bottom: 2px solid var(--border) !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+  height: 40px !important;
+  padding: 0 16px !important;
+  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  color: var(--ink-muted) !important;
+  border-radius: 4px 4px 0 0 !important;
+}
+
+.stTabs [aria-selected="true"] {
+  color: var(--primary) !important;
+  border-bottom: 2px solid var(--primary) !important;
+  background-color: var(--primary-soft) !important;
+}
+
+div[data-testid="stExpander"] {
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-card) !important;
+  background-color: var(--surface) !important;
+  box-shadow: none !important;
+}
+
+div[data-testid="stFileUploader"] section {
+  background-color: var(--surface-sunken) !important;
+  border: 1.5px dashed var(--border-strong) !important;
+  border-radius: var(--radius-card) !important;
+  padding: 24px !important;
+}
+
+div[data-testid="stDataFrame"] {
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-card) !important;
+  font-size: 13px !important;
+}
+
+
