@@ -1,0 +1,205 @@
+{
+  "_description": "Ground truth for Trace-Proof Phase 1 mock dataset (seed=42).",
+  "fraud_ring": {
+    "summary": "Victim duped into transferring Rs 4.8L; layered through 3 L1 mules + 2 L2 mules to ATM cashout in 11 minutes.",
+    "timeline_minutes": 11,
+    "total_amount_inr": 480000,
+    "pass_through_ratio": 0.96,
+    "hops": 3
+  },
+  "entities": {
+    "victim": {
+      "phone": "9811100001",
+      "account": "HDFC0000000001",
+      "upi": "victim@okicici",
+      "email": "victim.customer@gmail.com",
+      "role": "VICTIM"
+    },
+    "fraudster": {
+      "phone": "9900099001",
+      "email": "no-reply@hdfc-bank-helpdesk.in",
+      "role": "FRAUDSTER"
+    },
+    "l1_mules": [
+      {
+        "phone": "9811100101",
+        "account": "HDFC0001001001",
+        "upi": "mule1@ybl",
+        "role": "L1_MULE"
+      },
+      {
+        "phone": "9811100102",
+        "account": "HDFC0001001002",
+        "upi": "mule2@ybl",
+        "role": "L1_MULE"
+      },
+      {
+        "phone": "9811100103",
+        "account": "HDFC0001001003",
+        "upi": "mule3@ybl",
+        "role": "L1_MULE"
+      }
+    ],
+    "l2_mules": [
+      {
+        "phone": "9811100201",
+        "account": "HDFC0002001001",
+        "upi": "layer2a@paytm",
+        "role": "L2_MULE"
+      },
+      {
+        "phone": "9811100202",
+        "account": "HDFC0002001002",
+        "upi": "layer2b@paytm",
+        "role": "L2_MULE"
+      }
+    ],
+    "cashout": {
+      "phone": "9811100301",
+      "account": "HDFC0003001001",
+      "upi": "cashout@upi",
+      "role": "CASHOUT"
+    }
+  },
+  "correlation_hooks": [
+    {
+      "type": "SHARED_IMEI",
+      "imei": "351234567890001",
+      "phones": [
+        "9811100101",
+        "9811100102"
+      ],
+      "description": "Two L1 mules share one handset IMEI."
+    },
+    {
+      "type": "MULTI_IMSI",
+      "imei": "351234567890099",
+      "imsis": [
+        "404100000000101",
+        "404100000000102",
+        "404100000000103",
+        "404100000000104"
+      ],
+      "description": "One IMEI paired with 4 IMSIs -- SIM-swapping indicator."
+    },
+    {
+      "type": "RECURRING_BENEFICIARY",
+      "upi": "recurring.mule@ybl",
+      "victims": [
+        "9833300001",
+        "9833300002",
+        "9833300003"
+      ],
+      "description": "Same UPI beneficiary appears across 3 unrelated victims."
+    },
+    {
+      "type": "PHISHING_EMAIL",
+      "sender": "no-reply@hdfc-bank-helpdesk.in",
+      "recipient": "victim.customer@gmail.com",
+      "spf": "fail",
+      "dkim": "none",
+      "timing_minutes_before_debit": 9,
+      "description": "SPF-failing email from lookalike domain 9 min before victim debit."
+    },
+    {
+      "type": "SPOOFED_CALL",
+      "caller": "9900099001",
+      "callee": "9811100001",
+      "minutes_before_debit": 9,
+      "description": "Fraudster calls victim 9 min before first debit."
+    }
+  ],
+  "decoys": [
+    {
+      "type": "HIGH_FAN_IN_BUSINESS",
+      "phone": "9855500001",
+      "account": "ICICI0099990001",
+      "upi": "merchant.legitbiz@icici",
+      "description": "Legitimate merchant with 100+ customers. Must NOT be flagged."
+    },
+    {
+      "type": "FAMILY_SHARED_HANDSET",
+      "imei": "351234560000001",
+      "phones": [
+        "9877700001",
+        "9877700002"
+      ],
+      "description": "Family sharing one handset. SHARED_IMEI but innocent."
+    },
+    {
+      "type": "CGNAT_SHARED_SUBNET",
+      "subnet": "100.64.12.0/24",
+      "phones": [
+        "9866600001",
+        "9866600002"
+      ],
+      "description": "Two innocent users on same CGNAT /24. IP alone must NOT trigger."
+    }
+  ],
+  "expected_links": [
+    {
+      "link_type": "SHARED_IMEI",
+      "a": "9811100101",
+      "b": "9811100102",
+      "confidence": "HIGH",
+      "must_find": true
+    },
+    {
+      "link_type": "FUND_FLOW",
+      "a": "HDFC0000000001",
+      "b": "HDFC0001001001",
+      "confidence": "HIGH",
+      "must_find": true
+    },
+    {
+      "link_type": "FUND_FLOW",
+      "a": "HDFC0001001001",
+      "b": "HDFC0002001001",
+      "confidence": "HIGH",
+      "must_find": true
+    },
+    {
+      "link_type": "FUND_FLOW",
+      "a": "HDFC0002001001",
+      "b": "HDFC0003001001",
+      "confidence": "HIGH",
+      "must_find": true
+    },
+    {
+      "link_type": "RECURRING_BENEFICIARY",
+      "upi": "recurring.mule@ybl",
+      "victims": [
+        "9833300001",
+        "9833300002",
+        "9833300003"
+      ],
+      "confidence": "HIGH",
+      "must_find": true
+    },
+    {
+      "link_type": "SHARED_IMEI",
+      "a": "9877700001",
+      "b": "9877700002",
+      "confidence": "MEDIUM",
+      "must_find": false,
+      "note": "DECOY -- family shared handset, should score LOW risk"
+    }
+  ],
+  "false_link_checks": [
+    {
+      "desc": "CGNAT /24 alone must NOT produce FUND_FLOW or SHARED_IMEI",
+      "phones": [
+        "9866600001",
+        "9866600002"
+      ],
+      "allowed_link_types": [
+        "SHARED_IP_SUBNET"
+      ]
+    },
+    {
+      "desc": "Decoy merchant must NOT be classified as mule",
+      "phone": "9855500001",
+      "expected_risk_band": "LOW"
+    }
+  ]
+}

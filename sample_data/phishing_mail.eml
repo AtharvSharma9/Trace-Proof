@@ -1,0 +1,28 @@
+From: HDFC Bank Customer Care <customercare@hdfcbank.com>
+To: victim.customer@gmail.com
+Subject: URGENT: Your account access has been restricted - Verify immediately
+Date: Wed, 04 Mar 2026 04:44:00 +0000
+Message-ID: <fraud.9c448a43b589407a8175e503d39476d2@hdfc-bank-helpdesk.in>
+MIME-Version: 1.0
+Return-Path: <no-reply@hdfc-bank-helpdesk.in>
+Received: from mail.hdfc-bank-helpdesk.in (mail.hdfc-bank-helpdesk.in [185.220.101.42])
+        by mx.gmail.com (Postfix) with ESMTP
+        for <victim.customer@gmail.com>; Wed, 04 Mar 2026 04:44:00 +0000
+Received: from [192.168.1.10] (fraudster-machine.local [192.168.1.10])
+        by mail.hdfc-bank-helpdesk.in (Postfix) with ESMTP
+        for <victim.customer@gmail.com>; Wed, 04 Mar 2026 04:44:00 +0000
+Authentication-Results: mx.gmail.com;
+       spf=fail (google.com: domain of no-reply@hdfc-bank-helpdesk.in does not designate 185.220.101.42 as permitted sender) smtp.mailfrom=no-reply@hdfc-bank-helpdesk.in;
+       dkim=none header.d=hdfc-bank-helpdesk.in;
+       dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=hdfcbank.com
+X-Mailer: PHPMailer 6.0 (fraudkit)
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+<html><head><title>Account Verification Required</title></head><body>
+<p>Dear Valued Customer,</p>
+<p>We have detected <b>suspicious activity</b> on your HDFC Bank account ending in 0001. Your account has been temporarily restricted.</p>
+<p>To restore access, please call our helpdesk immediately: <b>+91-9900099001</b></p>
+<p>Failure to verify within 2 hours will result in permanent account suspension.</p>
+<p>HDFC Bank Security Team</p>
+</body></html>

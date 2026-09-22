@@ -1,7 +1,6 @@
 -- ============================================================
 -- PRAMAAN - Case Database Schema (<case_folder>/case.pramaan)
 -- Spec: 05_Backend_Schema.md §3
--- (Mirrors schema_case.sql for backwards compatibility)
 -- ============================================================
 
 PRAGMA foreign_keys = ON;

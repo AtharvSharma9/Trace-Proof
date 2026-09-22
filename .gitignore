@@ -1,9 +1,40 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
 *.pyc
 *.pyo
 *.pyd
-case_exports/
-.DS_Store
+
+# Pytest
+.pytest_cache/
+
+# Environments
+.env
+.venv
 .venv/
 env/
 venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Operating System & IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Local tooling cache
+.cache/
+
+# Nested checkout
+Trace-Proof/
+
+# Project specific
+case/exports/
+case_exports/
+*.sqlite3
+*.db
+
+solution.md
+

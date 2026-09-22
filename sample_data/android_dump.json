@@ -1,0 +1,131 @@
+{
+  "dump_metadata": {
+    "tool": "UFED Physical Analyzer 7.x",
+    "device": "Xiaomi Redmi Note 12",
+    "dump_time": "2026-03-04T16:23:00Z",
+    "examiner": "Forensic Lab Officer",
+    "case_ref": "CASE/2026/CYBER/001"
+  },
+  "device_info": {
+    "imei": "351234567890001",
+    "imei2": "116853299544460",
+    "imsi": "404100000000101",
+    "android_id": "965908fbe4e2440e9be33dcb796af78c",
+    "model": "Redmi Note 12",
+    "android_ver": "13",
+    "last_known_ip": "49.36.187.228",
+    "mac_address": "c1:67:c7:a3:83:f1",
+    "phone_number": "9811100101"
+  },
+  "installed_apps": [
+    {
+      "package": "com.phonepe.app",
+      "version": "4.8.1",
+      "first_install": "2025-11-12"
+    },
+    {
+      "package": "com.google.android.gm",
+      "version": "2023.05",
+      "first_install": "2025-09-01"
+    },
+    {
+      "package": "com.hdfc.mobilebanking",
+      "version": "3.2.0",
+      "first_install": "2026-02-15"
+    },
+    {
+      "package": "com.remoteadmin.rat",
+      "version": "1.0.1",
+      "first_install": "2026-01-30",
+      "certificate_sha256": "ab12cd34ef56gh78ij90kl12mn34op56qr78st90uv12wx34yz56ab78cd90ef12",
+      "risky_permissions": [
+        "READ_SMS",
+        "RECEIVE_SMS",
+        "READ_CALL_LOG",
+        "ACCESSIBILITY_SERVICE",
+        "SYSTEM_ALERT_WINDOW"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Boss",
+      "number": "9900099001",
+      "added": "02/02/2026 10:23:00"
+    },
+    {
+      "name": "Layer2A",
+      "number": "9811100201",
+      "added": "17/02/2026 10:23:00"
+    },
+    {
+      "name": "Layer2B",
+      "number": "9811100202",
+      "added": "17/02/2026 10:23:00"
+    },
+    {
+      "name": "Family",
+      "number": "9877700001",
+      "added": "16/08/2025 10:23:00"
+    }
+  ],
+  "call_log": [
+    {
+      "number": "9900099001",
+      "type": "INCOMING",
+      "date": "04/03/2026 10:14:00",
+      "duration": 312
+    },
+    {
+      "number": "9811100201",
+      "type": "OUTGOING",
+      "date": "04/03/2026 10:26:00",
+      "duration": 45
+    },
+    {
+      "number": "9811100001",
+      "type": "MISSED",
+      "date": "04/03/2026 11:23:00",
+      "duration": 0
+    }
+  ],
+  "sms_messages": [
+    {
+      "from": "HDFCBK",
+      "to": "9811100101",
+      "date": "04/03/2026 10:22:30",
+      "body": "HDFC: OTP for transaction is 847291. Valid for 10 mins. Do NOT share."
+    },
+    {
+      "from": "9900099001",
+      "to": "9811100101",
+      "date": "04/03/2026 10:24:00",
+      "body": "Amount aa gaya. Aage bhej do jaldi."
+    },
+    {
+      "from": "PHONEPE",
+      "to": "9811100101",
+      "date": "04/03/2026 10:25:00",
+      "body": "Rs.153600 credited to your PhonePe wallet from victim@okicici."
+    }
+  ],
+  "apk_artifacts": [
+    {
+      "filename": "RemoteAdmin_v1.0.1.apk",
+      "package": "com.remoteadmin.rat",
+      "sha256": "ab12cd34ef56gh78ij90kl12mn34op56qr78st90uv12wx34yz56ab78cd90ef12",
+      "signing_cert_issuer": "CN=FraudKit Dev, O=Unknown",
+      "embedded_urls": [
+        "http://185.220.101.42/cmd",
+        "http://185.220.101.42/upload"
+      ],
+      "permissions": [
+        "READ_SMS",
+        "RECEIVE_SMS",
+        "READ_CALL_LOG",
+        "ACCESSIBILITY_SERVICE",
+        "SYSTEM_ALERT_WINDOW"
+      ]
+    }
+  ]
+}

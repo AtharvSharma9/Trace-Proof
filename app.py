@@ -61,7 +61,9 @@ case_id = query_params.get("case", st.session_state.get("current_case_id", "case
 
 
 # ── 4. ROUTER & AUTH GUARD ──────────────────────────────────────────────────
-def determine_active_route(requested_view: str) -> str:
+def determine_active_route(requested_view: str) -
+
+> str:
     """Enforces section 7 session and redirect rules from App Flow."""
     if requested_view == "styleguide":
         return "styleguide"
