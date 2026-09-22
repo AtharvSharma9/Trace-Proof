@@ -1,4 +1,4 @@
-# Trace-Proof
+# Pramaan
 
 
 
@@ -11,13 +11,13 @@
 
 ---
 
-## What is Trace-Proof?
+## What is Pramaan?
 
-Trace-Proof is an **offline forensic triage workstation** for cyber-fraud investigations. It ingests fragmented evidence from multiple incompatible formats (CDRs, IPDRs, bank statements, emails, Android dumps), automatically links entities hiding inside them, ranks suspect accounts with plain-language reasons, and produces a one-page investigative brief where **every claim traces to a source file, a row number and a SHA-256 hash**.
+Pramaan is an **offline forensic triage workstation** for cyber-fraud investigations. It ingests fragmented evidence from multiple incompatible formats (CDRs, IPDRs, bank statements, emails, Android dumps), automatically links entities hiding inside them, ranks suspect accounts with plain-language reasons, and produces a one-page investigative brief where **every claim traces to a source file, a row number and a SHA-256 hash**.
 
 > **The positioning in one sentence:**  
 > Other tools tell an investigating officer *what* is suspicious.  
-> Trace-Proof also proves *why* — and proves the evidence behind the *why* has not been altered since it was seized.
+> Pramaan also proves *why* — and proves the evidence behind the *why* has not been altered since it was seized.
 
 ---
 
@@ -73,8 +73,8 @@ Cases are created, listed and reopened. Each case is one portable `.pramaan` (SQ
 
 ```bash
 # 1. Clone and set up
-git clone https://github.com/AtharvSharma9/Trace-Proof.git
-cd Trace-Proof
+git clone https://github.com/AtharvSharma9/Pramaan.git
+cd Pramaan
 python -m venv .venv && .venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 
@@ -113,7 +113,7 @@ Open `http://localhost:8501` in your browser. Log in with your officer credentia
 ## Repository Structure
 
 ```
-Trace-Proof/
+Pramaan/
 ├── app.py                    # Streamlit entry point + router
 ├── views/                    # One module per screen (S00–S17)
 ├── services/                 # case, ingest, correlate, risk, integrity, report
@@ -257,4 +257,4 @@ Then build phase by phase using `06_Implementation_Plan.md`. **Do not ask for th
 
 ---
 
-*Trace-Proof · PRAMAAN v1.0 · Hackathon Screening Round*
+*PRAMAAN v1.0 · Hackathon Screening Round*

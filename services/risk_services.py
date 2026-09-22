@@ -8,7 +8,7 @@ from engine.anomaly import run_anomaly_detection, apply_anomaly_reranking
 import pandas as pd
 
 # ── Load mock data ──────────────────────────────────────────────────────────
-DATA_PATH = "C:/0/Hack/Trace-Proof/tools/mockgen/data/mock_features_large.csv"
+DATA_PATH = "C:/0/Hack/Pramaan/tools/mockgen/data/mock_features_large.csv"
 features_df = pd.read_csv(DATA_PATH)
 
 # ── Step 1: Run anomaly detection ────────────────────────────────────────────

@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+*.pyo
+*.pyd
 
 # Pytest
 .pytest_cache/
@@ -9,11 +12,17 @@ __pycache__/
 # Environments
 .env
 .venv
+.venv/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Operating System & IDE
+.DS_Store
+.idea/
+.vscode/
 
 # Local tooling cache
 .cache/
@@ -23,7 +32,9 @@ Trace-Proof/
 
 # Project specific
 case/exports/
+case_exports/
 *.sqlite3
 *.db
 
 solution.md
+
